@@ -1,0 +1,41 @@
+# user messages
+_message_before_copy: |
+    Thanks for generating a project using our template.
+
+    You'll be asked a series of questions whose answers will be used to
+    generate a tailored project for you.
+
+    For each question there is a placeholder. Make sure you provide an
+    input to each of them.
+
+_message_after_copy: |
+    Your project "{{ package_name }}" has been successfully created in {{ _copier_conf.dst_path }} folder!
+
+    Next steps:
+        - Below are the commands to put your Python package under using git:
+            cd {{ _copier_conf.dst_path }}
+            git init
+            git add --all
+            git commit -m "first commit"
+            git branch -M main
+            git remote add origin {{ repository }}.git
+
+        - Push the initial commit to a new repo on GitHub
+            Go to https://github.com/organizations/{{github_organization}}/repositories/new
+            and create a new repository named `{{ package_name }}` as an empty repository, then push your commits to GitHub:
+
+            git push --set-upstream origin main
+
+        - Project development documentation
+            The README.dev.md contains developer documentation
+
+_message_before_update: |
+    Thanks for updating your project using our template.
+
+    You'll be asked a series of questions whose answers are pre-populated
+    with previously entered values. Feel free to change them as needed.
+
+_message_after_update: |
+    Your project "{{ package_name }}" has been updated successfully!
+    In case there are any conflicts, please resolve them. Then,
+    you're done.

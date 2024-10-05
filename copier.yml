@@ -1,0 +1,15 @@
+---
+# General settings for copier
+!include copier/settings.yml
+
+---
+# essential questions about the package details
+!include copier/questions/essential.yml
+
+---
+# additional questions about the package details
+!include copier/questions/package_details.yml
+
+---
+# User messages
+!include copier/messages.yml

@@ -1,0 +1,34 @@
+---
+# Essential questions
+package_name:
+  type: str
+  placeholder: your_python_package
+  help: Enter the name of the Python package
+  validator: >-
+        {% if not (package_name | regex_search('^[a-z][a-z0-9\_]+$')) %}
+        Package name must start with a letter, followed one or more letters, digits or underscores all lowercase
+        {% endif %}
+version:
+  type: str
+  default: 0.1.0
+  help: Enter the version of the Python package
+  validator: >-
+        {% if not (version | regex_search('^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$')) %}
+        Package version should use Semantic Versioning 2.0.0 (MAJOR.MINOR.PATCH)
+        {% endif %}
+full_name:
+  type: str
+  placeholder: Jane Smith
+  help: Enter your full name
+  validator: >-
+        {% if not full_name %}
+        Full name cannot be empty!
+        {% endif %}
+copyright_holder:
+  type: str
+  default: "{{ full_name }}"
+  help: "Who is the copyright holder (default: full name)?"
+  validator: >-
+        {% if not copyright_holder %}
+        This field cannot be empty as it will be used in content of the generated files.
+        {% endif %}
