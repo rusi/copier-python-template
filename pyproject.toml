@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "{{package_name}}"
+name = "Copier Python Template"
 version = "0.1.0"
-description = "{{package_short_description}}"
-authors = ["{{full_name}} <{{email}}>"]
+description = "A simple python project template"
+authors = ["Ruslan Hristov <rusi@me.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -12,6 +12,8 @@ python = ">=3.10"
 pytest = "^8.3.3"
 ruff = "^0.6.9"
 coverage = {extras = ["toml"], version = "^7.6.1"}
+pytest-copie = "^0.2.0"
+pyprojroot = "^0.3.0"
 
 [build-system]
 requires = ["poetry-core"]

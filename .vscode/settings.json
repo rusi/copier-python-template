@@ -1,0 +1,48 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "always",
+            "source.organizeImports.ruff": "always"
+        },
+        "editor.rulers": [
+            120
+        ]
+        // "editor.formatOnType": true,
+        // "editor.wordBasedSuggestions": "off"
+    },
+    "ruff.fixAll": true,
+    // "autoDocstring.customTemplatePath": ".vscode/autoDocstring.templates/doxygen-notypes.mustache",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/src/",
+    ],
+    // "python.envFile": "${workspaceFolder}/.env",
+    "python.autoComplete.extraPaths": [
+    ],
+    "python.testing.pytestArgs": [
+        "-s", "-vv",
+    ],
+    "python.testing.pytestEnabled": true,
+    "explorer.excludeGitIgnore": true,
+    "search.exclude": {
+        "**/.fvm": true,
+        "**/.idea": true
+    },
+    "files.watcherExclude": {
+        "**/.fvm": true,
+        "**/.idea": true
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".obsidian": true
+    },
+    "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor"
+    }
+}

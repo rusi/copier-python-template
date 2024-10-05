@@ -1,0 +1,111 @@
+# [tool.ruff]
+
+line-length = 120 # defaults 88
+
+show-fixes = true
+force-exclude = true
+
+exclude = [
+]
+
+select = [
+    # "ALL" # all rules, or select specific rules below:
+    # rules ref: https://docs.astral.sh/ruff/rules/
+    "F",     # Pyflakes (F)
+    "E", "W",# pycodestyle (E, W), Warning (W), Error (E)
+    "C90",   # mccabe (C90)
+    "I",     # isort (I)
+    "N",     # pep8-naming (N)
+    "D",     # pydocstyle (D)
+    "UP",    # pyupgrade (UP)
+    "YTT",   # flake8-2020 (YTT)
+    "ANN",   # flake8-annotations (ANN)
+    "ASYNC", # flake8-async (ASYNC)
+    "S",     # flake8-bandit (S)
+    "BLE",   # flake8-blind-except (BLE)
+    "FBT",   # flake8-boolean-trap (FBT)
+    "B",     # flake8-bugbear (B)
+    "A",     # flake8-builtins (A)
+    "COM",   # flake8-commas (COM)
+    "CPY",   # flake8-copyright (CPY) --preview
+    "C4",    # flake8-comprehensions (C4)
+    "DTZ",   # flake8-datetimez (DTZ)
+    "T10",   # flake8-debugger (T10)
+    "DJ",    # flake8-django (DJ)
+    "EM",    # flake8-errmsg (EM)
+    "EXE",   # flake8-executable (EXE)
+    "FA",    # flake8-future-annotations (FA)
+    "ISC",   # flake8-implicit-str-concat (ISC)
+    "ICN",   # flake8-import-conventions (ICN)
+    "LOG",   # flake8-logging (LOG) --preview
+    "G",     # flake8-logging-format (G)
+    "INP",   # flake8-no-pep420 (INP)
+    "PIE",   # flake8-pie (PIE)
+    "T20",   # flake8-print (T20)
+    "PYI",   # flake8-pyi (PYI)
+    "PT",    # flake8-pytest-style (PT)
+    "Q",     # flake8-quotes (Q)
+    "RSE",   # flake8-raise (RSE)
+    "RET",   # flake8-return (RET)
+    "SLF",   # flake8-self (SLF)
+    "SLOT",  # flake8-slots (SLOT)
+    "SIM",   # flake8-simplify (SIM)
+    "TID",   # flake8-tidy-imports (TID)
+    "TCH",   # flake8-type-checking (TCH)
+    "INT",   # flake8-gettext (INT)
+    "ARG",   # flake8-unused-arguments (ARG)
+    "PTH",   # flake8-use-pathlib (PTH)
+    "TD",    # flake8-todos (TD)
+    "FIX",   # flake8-fixme (FIX)
+    "ERA",   # eradicate (ERA)
+    "PD",    # pandas-vet (PD)
+    "PGH",   # pygrep-hooks (PGH)
+    "PL",    # Pylint (PL) # PLC, PLE, PLR, PLW
+    "TRY",   # tryceratops (TRY)
+    "FLY",   # flynt (FLY)
+    "NPY",   # NumPy-specific rules (NPY)
+    "FAST",  # FastAPI (FAST)
+    "AIR",   # Airflow (AIR)
+    "PERF",  # Perflint (PERF)
+    "FURB",  # refurb (FURB) --preview
+    "DOC",   # pydoclink (DOC)
+    "RUF",   # Ruff-specific rules (RUF)
+    "TRIO",  # flake8-trio (TRIO) --preview
+]
+
+ignore = [
+    "ANN101", # Missing type annotation for `self` in method
+    "ANN102", # Missing type annotation for `cls` in classmethod
+    #"ANN204", # Missing return type annotation for special (dunder) method
+    #"FBT",    # Using boolean function arguments
+    #"TD",     # TODOs
+    #"FIX001", # Resolve FIXMEs
+    #"FIX002", # Resolve TODOs
+    #"B028",   # No explicit `stacklevel` keyword argument found in warning
+    #"COM812", # flake8-commas "Trailing comma missing"
+    #"ISC001", # flake8-implicit-str-concat "Implicitly concatenated string literals on one line"
+
+    # No docstrings required in the following cases
+    "D100", # Missing module docstring
+    "D104", # Missing public package docstring
+    "D105", # Missing docstring in magic method
+    "D107", # Missing docstring in `__init__`
+    #"D203", # pydocstyle - one-blank-line-before-class
+    #"D213", # pydocstyle - multi-line-summary-second-line
+]
+
+
+[lint.per-file-ignores]
+#"**/{tests}/*" = [
+    # "S101", "S105"
+]
+"tests/**/*.py" = [
+    # "S101", "S105"
+]
+
+[format]
+quote-style = "double"  # this is the default
+skip-magic-trailing-comma = false
+
+[isort]
+split-on-trailing-comma = false
