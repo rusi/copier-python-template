@@ -5,6 +5,8 @@ This template can be used to setup a new Python project using [Copier](https://g
 ## Usage
 
 ```bash
+copier copy gh:rusi/copier-python-template
+# or
 copier copy https://github.com/rusi/copier-python-template.git
 ```
 

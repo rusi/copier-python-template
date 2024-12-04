@@ -32,6 +32,14 @@ email:
         Please enter a valid email address
         {% endif %}
 
+license:
+  type: str
+  placeholder: MIT
+  help: Enter the license for the package
+  validator: >-
+        {% if not license %}
+        License cannot be empty
+        {% endif %}
 
 # computed fields
 repository:

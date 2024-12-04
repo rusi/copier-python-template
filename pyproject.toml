@@ -1,20 +1,26 @@
-[tool.poetry]
+[project]
 name = "Copier Python Template"
 version = "0.1.0"
 description = "A simple python project template"
-authors = ["Ruslan Hristov <rusi@me.com>"]
+authors = [
+    {name = "Ruslan Hristov", email = "rusi@me.com"},
+]
+dependencies = []
+requires-python = ">=3.10"
 readme = "README.md"
+license = {text = "MIT"}
 
-[tool.poetry.dependencies]
-python = ">=3.10"
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest<9.0.0,>=8.3.3",
+    "ruff<1.0.0,>=0.6.9",
+    "coverage[toml]<8.0.0,>=7.6.1",
+    "pytest-copie<1.0.0,>=0.2.0",
+    "pyprojroot<1.0.0,>=0.3.0",
+]
 
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.3.3"
-ruff = "^0.6.9"
-coverage = {extras = ["toml"], version = "^7.6.1"}
-pytest-copie = "^0.2.0"
-pyprojroot = "^0.3.0"
+[tool.pdm]
+distribution = false
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.pdm.build]
+includes = []

@@ -1,22 +1,26 @@
 {
-	// See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
-	// Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+  // See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+  // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
 
-	// List of extensions which should be recommended for users of this workspace.
-	"recommendations": [
-		"ms-python.python",
-		"ms-python.debugpy",
-		"ms-python.vscode-pylance",
-		"ms-python.mypy-type-checker",
-		"editorconfig.editorconfig",
-		"ms-azuretools.vscode-docker",
-		"ms-vscode.cmake-tools",
-		"marlom.keep-context",
-		"njpwerner.autodocstring",
-		"charliermarsh.ruff"
-	],
-	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
-	"unwantedRecommendations": [
+  // List of extensions which should be recommended for users of this workspace.
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.debugpy",
+    "ms-python.vscode-pylance",
+    "ms-python.mypy-type-checker",
+    "editorconfig.editorconfig",
+    "ms-azuretools.vscode-docker",
+    "marlom.keep-context",
+    "njpwerner.autodocstring",
+    "charliermarsh.ruff",
+    "timonwong.shellcheck",
+    "marquesmps.dockerfile-validator",
+    "piotrpalarz.vscode-gitignore-generator",
+    "likec4.likec4-vscode",
+    "eamodio.gitlens"
+  ],
+  // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+  "unwantedRecommendations": [
 
-	]
+  ]
 }
