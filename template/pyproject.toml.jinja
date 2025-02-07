@@ -13,11 +13,13 @@ license = {text = "{{license}}"}
 [dependency-groups]
 dev = [
     "pytest<9.0.0,>=8.3.3",
-    "pytest-cov<8.0.0,>=7.6.1",
-    "pytest-freezegun<1.0.0,>=1.0.0",
+    "pytest-mock>=3.14.0",
+    "pytest-freezegun>=0.4.2",
+    "pytest-cov>=6.0.0",
+    "pydantic>=2.10.6",
+    "mypy>=1.15.0",
     "coverage[toml]<8.0.0,>=7.6.1",
-    "mypy<1.0.0,>=1.11.1",
-    "ruff<1.0.0,>=0.6.9"
+    "ruff<1.0.0,>=0.6.9",
 ]
 
 [tool.pdm]
